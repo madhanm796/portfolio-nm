@@ -1,0 +1,61 @@
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.theme-btn {
+    position: absolute;
+    top:0em; right:0;
+}
+
+
+
+@media only screen and (min-width:1200px) {
+ 
+    .container .user-detail {
+        justify-self:start;
+        text-align: left !important;
+        align-self: end !important;
+        height:100%;
+        /* background: #000; */
+        h1 {
+            font-size:4em !important;
+        }
+        h6 {
+            font-size:1.2rem !important;
+        }
+    }
+    
+    .left-container {
+        border-right:2px solid whitesmoke;
+    }
+
+    .education {
+        justify-self: start;
+        margin-top: 2.5rem;
+        text-align: left !important;
+
+        h1 {
+            text-align: left !important;
+        }
+    }
+    .contact-me {
+        justify-self: start;
+        margin-top:2.5rem;
+        
+        .contact, h1{
+            justify-content: start !important;
+            text-align: left !important;
+        }
+    }
+    .skills, .about-me {
+        margin-top: 2.5rem;
+        justify-self: start;
+        h1 {text-align: left !important;}
+    }
+}
