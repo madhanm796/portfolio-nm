@@ -1,32 +1,30 @@
 
+let isDarkTheme = false;
+
 window.addEventListener('contextmenu', (e)=> {
     e.preventDefault()
 })
 
-window.onload = () => {
-
-    console.log("Checking theme status...")
-
-    const themeKey = sessionStorage.getItem('theme')
-
-    let isDarkMode = false
-
-    if (themeKey == null)
-        return
-
-    switch (themeKey) {
-        case 'dark': isDarkMode = !isDarkMode
-        default: isDarkMode = false
-    }
-
-    if (!isDarkMode) return
-
-    loadDarkTheme()        
-
-}
-
 function loadDarkTheme() {
 
-    console.log("Loading dark theme...")
+    const bodyElement = document.querySelector('body');
+    bodyElement.classList.toggle('dark-theme');
+    const icons = {
+        'sun': './assets/icons/sun.png',
+        'moon': './assets/icons/moon.png'
+    }
+    const imgElement = document.querySelector('.theme-icon');
+
+
+    if (isDarkTheme) {
+        imgElement.setAttribute('src', icons.moon)
+        
+        
+    }
+    else {
+        imgElement.setAttribute('src', icons.sun);
+    }
+    isDarkTheme = !isDarkTheme;
+
 
 }
